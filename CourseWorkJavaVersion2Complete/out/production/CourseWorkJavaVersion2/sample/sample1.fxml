@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="601.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller1">
+   <children>
+      <ComboBox fx:id="choose" layoutX="12.0" layoutY="39.0" onAction="#choose_click" onShown="#choose_show" prefHeight="25.0" prefWidth="200.0" visibleRowCount="2" />
+      <Label layoutX="14.0" layoutY="14.0" text="Метод расчета" />
+      <Label layoutX="17.0" layoutY="70.0" text="Начальное положение" />
+      <Button id="btn2" layoutX="454.0" layoutY="458.0" mnemonicParsing="false" onAction="#btn2_Click" text="Расчитать" />
+      <AnchorPane fx:id="panestraiht" layoutX="249.0" prefHeight="225.0" prefWidth="351.0" visible="false">
+         <children>
+            <Label layoutX="133.0" layoutY="6.0" text="Прямой расчёт" />
+            <Label layoutX="14.0" layoutY="37.0" text="Угол поворота от платформы:" />
+            <Label layoutX="14.0" layoutY="63.0" text="Угол поворота от звена:" />
+            <Label layoutX="14.0" layoutY="88.0" text="Угол поворота в платформе:" />
+            <Label layoutX="14.0" layoutY="130.0" text="X:" />
+            <Label layoutX="14.0" layoutY="154.0" text="Y:" />
+            <Label layoutX="14.0" layoutY="179.0" text="Z:" />
+            <Label layoutX="146.0" layoutY="113.0" text="Результат" />
+            <TextField fx:id="txt1straitht" layoutX="188.0" layoutY="33.0" prefHeight="25.0" prefWidth="53.0" />
+            <TextField fx:id="txt2straitht" layoutX="188.0" layoutY="59.0" prefHeight="25.0" prefWidth="53.0" />
+            <TextField fx:id="txt3straitht" layoutX="188.0" layoutY="85.0" prefHeight="25.0" prefWidth="53.0" />
+            <TextField fx:id="resulttxt1staiht" editable="false" layoutX="28.0" layoutY="126.0" prefHeight="25.0" prefWidth="53.0" />
+            <TextField fx:id="resulttxt2staiht" editable="false" layoutX="28.0" layoutY="152.0" prefHeight="25.0" prefWidth="53.0" />
+            <TextField fx:id="resulttxt3staiht" editable="false" layoutX="28.0" layoutY="178.0" prefHeight="25.0" prefWidth="53.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneback" layoutX="249.0" layoutY="225.0" prefHeight="225.0" prefWidth="351.0" visible="false">
+         <children>
+            <Label layoutX="127.0" layoutY="6.0" text="Обратный расчёт" />
+            <Label layoutX="14.0" layoutY="35.0" text="X:" />
+            <Label layoutX="14.0" layoutY="61.0" text="Y:" />
+            <Label layoutX="14.0" layoutY="86.0" text="Z:" />
+            <Label layoutX="10.0" layoutY="132.0" text="Угол поворота от платформы:" />
+            <Label layoutX="10.0" layoutY="158.0" text="Угол поворота от звена:" />
+            <Label layoutX="10.0" layoutY="185.0" text="Угол поворота в платформе:" />
+            <TextField fx:id="txt1back" layoutX="27.0" layoutY="31.0" prefHeight="25.0" prefWidth="55.0" />
+            <TextField fx:id="txt2back" layoutX="27.0" layoutY="57.0" prefHeight="25.0" prefWidth="55.0" />
+            <TextField fx:id="txt3back" layoutX="27.0" layoutY="83.0" prefHeight="25.0" prefWidth="55.0" />
+            <TextField fx:id="resulttxt1back" editable="false" layoutX="184.0" layoutY="129.0" prefHeight="25.0" prefWidth="55.0" />
+            <TextField fx:id="resulttxt2back" editable="false" layoutX="184.0" layoutY="155.0" prefHeight="25.0" prefWidth="55.0" />
+            <TextField fx:id="resulttxt3back" editable="false" layoutX="184.0" layoutY="181.0" prefHeight="25.0" prefWidth="55.0" />
+            <Label layoutX="142.0" layoutY="104.0" text="Результат" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="error" layoutX="296.0" layoutY="493.0" prefHeight="43.0" prefWidth="292.0" />
+      <Canvas fx:id="cnv1" height="200.0" layoutX="17.0" layoutY="87.0" width="200.0" />
+      <Label layoutX="17.0" layoutY="294.0" text="Конечное положение" />
+      <Canvas fx:id="cnv2" height="200.0" layoutX="17.0" layoutY="314.0" width="200.0" />
+   </children>
+</AnchorPane>
